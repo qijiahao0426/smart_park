@@ -1,0 +1,17 @@
+server:
+  port: 8082 #指定端口
+spring:
+  application:
+    name: smart #应用名称
+  datasource: #数据源
+    url: jdbc:mysql://localhost:3306/smart_park?useUnicode=true&characterEncoding=utf-8
+    username: root #账号
+    password:  #密码
+    driver-class-name: com.mysql.cj.jdbc.Driver #数据库驱动
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名法
+logging:
+  level:
+    com.youku1327.mybatis.mapper: debug #日志级别
