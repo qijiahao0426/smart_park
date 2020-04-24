@@ -1,7 +1,6 @@
-package cn.starqjh.smart.mapper;
+package cn.cyb.smart.mapper;
 
-import cn.starqjh.smart.bean.User;
-import org.apache.ibatis.annotations.Insert;
+import cn.cyb.smart.bean.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Select;

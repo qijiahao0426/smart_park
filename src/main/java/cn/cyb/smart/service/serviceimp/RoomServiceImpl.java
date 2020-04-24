@@ -1,8 +1,8 @@
-package cn.starqjh.smart.service.serviceimp;
+package cn.cyb.smart.service.serviceimp;
 
-import cn.starqjh.smart.bean.Room;
-import cn.starqjh.smart.mapper.RoomMapper;
-import cn.starqjh.smart.service.RoomService;
+import cn.cyb.smart.bean.Room;
+import cn.cyb.smart.mapper.RoomMapper;
+import cn.cyb.smart.service.RoomService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +14,10 @@ public class RoomServiceImpl implements RoomService {
     @Override
     public List<Room> getAllRoom() {
         return  roomMapper.getAllRoom();
+    }
+
+    @Override
+    public List<Room> getRoomByBuild(int buildId) {
+        return roomMapper.getRoomByBuild(buildId);
     }
 }

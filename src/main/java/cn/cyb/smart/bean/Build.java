@@ -1,4 +1,4 @@
-package cn.starqjh.smart.bean;
+package cn.cyb.smart.bean;
 
 public class Build {
     private int buildId;

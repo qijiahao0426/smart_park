@@ -1,4 +1,4 @@
-package cn.starqjh.smart;
+package cn.cyb.smart;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -14,4 +14,4 @@ mybatis:
     map-underscore-to-camel-case: true #开启驼峰命名法
 logging:
   level:
-    com.youku1327.mybatis.mapper: debug #日志级别
+    cn.cyb: debug #日志级别

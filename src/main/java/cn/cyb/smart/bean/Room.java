@@ -1,4 +1,7 @@
-package cn.starqjh.smart.bean;
+package cn.cyb.smart.bean;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -9,30 +12,13 @@ public class Room {
     private String rentType;
     private double roomPrice;
     private int roomState;
-    private Date datetime;
-    private String enterprise;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    private Date timeToUse;
+    private String enterpriseName;
     private String buildName;
     private String parkName;
     private String area;
     private int tradeState;
-
-    @Override
-    public String toString() {
-        return "Room{" +
-                "roomName=" + roomName +
-                ", roomHigh=" + roomHigh +
-                ", roomArea=" + roomArea +
-                ", rentType='" + rentType + '\'' +
-                ", roomPrice=" + roomPrice +
-                ", roomState=" + roomState +
-                ", datetime=" + datetime +
-                ", enterprise='" + enterprise + '\'' +
-                ", buildName='" + buildName + '\'' +
-                ", parkName='" + parkName + '\'' +
-                ", area='" + area + '\'' +
-                ", tradeState=" + tradeState +
-                '}';
-    }
 
     public String getArea() {
         return area;
@@ -106,20 +92,38 @@ public class Room {
         this.roomState = roomState;
     }
 
-    public Date getDatetime() {
-        return datetime;
+    @Override
+    public String toString() {
+        return "Room{" +
+                "roomName=" + roomName +
+                ", roomHigh=" + roomHigh +
+                ", roomArea=" + roomArea +
+                ", rentType='" + rentType + '\'' +
+                ", roomPrice=" + roomPrice +
+                ", roomState=" + roomState +
+                ", timeToUse='" + timeToUse + '\'' +
+                ", enterpriseName='" + enterpriseName + '\'' +
+                ", buildName='" + buildName + '\'' +
+                ", parkName='" + parkName + '\'' +
+                ", area='" + area + '\'' +
+                ", tradeState=" + tradeState +
+                '}';
     }
 
-    public void setDatetime(Date datetime) {
-        this.datetime = datetime;
+    public Date getTimeToUse() {
+        return timeToUse;
     }
 
-    public String getEnterprise() {
-        return enterprise;
+    public void setTimeToUse(Date timeToUse) {
+        this.timeToUse = timeToUse;
     }
 
-    public void setEnterprise(String enterprise) {
-        this.enterprise = enterprise;
+    public String getEnterpriseName() {
+        return enterpriseName;
+    }
+
+    public void setEnterpriseName(String enterpriseName) {
+        this.enterpriseName = enterpriseName;
     }
 
     public String getBuildName() {

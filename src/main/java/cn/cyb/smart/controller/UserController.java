@@ -1,9 +1,8 @@
-package cn.starqjh.smart.controller;
+package cn.cyb.smart.controller;
 
-import cn.starqjh.smart.bean.User;
-import cn.starqjh.smart.service.UserService;
+import cn.cyb.smart.bean.User;
+import cn.cyb.smart.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

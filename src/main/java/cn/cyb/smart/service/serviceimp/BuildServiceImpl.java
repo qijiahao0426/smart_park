@@ -1,8 +1,8 @@
-package cn.starqjh.smart.service.serviceimp;
+package cn.cyb.smart.service.serviceimp;
 
-import cn.starqjh.smart.bean.Build;
-import cn.starqjh.smart.mapper.BuildMapper;
-import cn.starqjh.smart.service.BuildService;
+import cn.cyb.smart.bean.Build;
+import cn.cyb.smart.mapper.BuildMapper;
+import cn.cyb.smart.service.BuildService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

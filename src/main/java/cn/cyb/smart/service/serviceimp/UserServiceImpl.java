@@ -1,8 +1,8 @@
-package cn.starqjh.smart.service.serviceimp;
+package cn.cyb.smart.service.serviceimp;
 
-import cn.starqjh.smart.bean.User;
-import cn.starqjh.smart.mapper.UserMapper;
-import cn.starqjh.smart.service.UserService;
+import cn.cyb.smart.bean.User;
+import cn.cyb.smart.mapper.UserMapper;
+import cn.cyb.smart.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

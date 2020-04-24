@@ -1,6 +1,6 @@
-package cn.starqjh.smart.mapper;
+package cn.cyb.smart.mapper;
 
-import cn.starqjh.smart.bean.Build;
+import cn.cyb.smart.bean.Build;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Select;
