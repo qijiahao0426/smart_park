@@ -12,6 +12,9 @@ public class Room {
     private Date datetime;
     private String enterprise;
     private String buildName;
+    private String parkName;
+    private String area;
+    private int tradeState;
 
     @Override
     public String toString() {
@@ -25,7 +28,34 @@ public class Room {
                 ", datetime=" + datetime +
                 ", enterprise='" + enterprise + '\'' +
                 ", buildName='" + buildName + '\'' +
+                ", parkName='" + parkName + '\'' +
+                ", area='" + area + '\'' +
+                ", tradeState=" + tradeState +
                 '}';
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public int getTradeState() {
+        return tradeState;
+    }
+
+    public void setTradeState(int tradeState) {
+        this.tradeState = tradeState;
+    }
+
+    public String getParkName() {
+        return parkName;
+    }
+
+    public void setParkName(String parkName) {
+        this.parkName = parkName;
     }
 
     public int getRoomName() {

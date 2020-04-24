@@ -13,6 +13,6 @@ public class RoomServiceImpl implements RoomService {
     RoomMapper roomMapper;
     @Override
     public List<Room> getAllRoom() {
-        return (List<Room>) roomMapper.getAllRoom();
+        return  roomMapper.getAllRoom();
     }
 }
