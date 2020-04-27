@@ -10,6 +10,7 @@ public class Enterprise {
     private int useState;
     private String leaveReason;
     private String contactPhone;
+    private String roomName;
 
     @Override
     public String toString() {
@@ -23,7 +24,16 @@ public class Enterprise {
                 ", useState=" + useState +
                 ", leaveReason='" + leaveReason + '\'' +
                 ", contactPhone='" + contactPhone + '\'' +
+                ", roomName='" + roomName + '\'' +
                 '}';
+    }
+
+    public String getRoomName() {
+        return roomName;
+    }
+
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
     }
 
     public int getEnterpriseId() {
