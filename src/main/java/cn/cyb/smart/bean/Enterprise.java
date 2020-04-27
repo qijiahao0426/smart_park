@@ -1,5 +1,9 @@
 package cn.cyb.smart.bean;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.util.Date;
+
 public class Enterprise {
     private int enterpriseId;
     private String enterpriseName;
@@ -11,6 +15,8 @@ public class Enterprise {
     private String leaveReason;
     private String contactPhone;
     private String roomName;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    private Date leaveTime;
 
     @Override
     public String toString() {
@@ -25,7 +31,16 @@ public class Enterprise {
                 ", leaveReason='" + leaveReason + '\'' +
                 ", contactPhone='" + contactPhone + '\'' +
                 ", roomName='" + roomName + '\'' +
+                ", leaveTime=" + leaveTime +
                 '}';
+    }
+
+    public Date getLeaveTime() {
+        return leaveTime;
+    }
+
+    public void setLeaveTime(Date leaveTime) {
+        this.leaveTime = leaveTime;
     }
 
     public String getRoomName() {
