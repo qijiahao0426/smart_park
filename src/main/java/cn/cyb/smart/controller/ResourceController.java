@@ -1,6 +1,7 @@
 package cn.cyb.smart.controller;
 
 import cn.cyb.smart.bean.Resource;
+import cn.cyb.smart.bean.ResourceApplication;
 import cn.cyb.smart.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,4 +29,10 @@ public class ResourceController {
     public List<Resource> getAllBreak() {
         return resourceService.getAllBreak();
     }
+    @GetMapping("will_out_time")
+    public List<ResourceApplication> getAllWillOutTime(){
+        return resourceService.getAllWillOutTime();
+    }
+
+
 }

@@ -1,6 +1,7 @@
 package cn.cyb.smart.service.serviceimp;
 
 import cn.cyb.smart.bean.Resource;
+import cn.cyb.smart.bean.ResourceApplication;
 import cn.cyb.smart.mapper.ResourceMapper;
 import cn.cyb.smart.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,11 @@ public class ResourceServiceImpl implements ResourceService {
     @Override
     public List<Resource> getAllBreak() {
         return resourceMapper.getAllBreak();
+    }
+
+    @Override
+    public List<ResourceApplication> getAllWillOutTime() {
+        return resourceMapper.getAllWillOutTime();
     }
 
 }
