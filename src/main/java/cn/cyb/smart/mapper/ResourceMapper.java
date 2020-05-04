@@ -12,13 +12,12 @@ import java.util.List;
 @Mapper
 @Repository
 public interface ResourceMapper {
-    @Select("SELECT r.*,ra.begin_time,ra.end_time,e.enterprise_name\n" +
-            "FROM resource_t r \n" +
-            "LEFT JOIN res_app_t ra ON ra.resource_id=r.resource_id\n" +
-            "LEFT JOIN enterprise_t e ON e.enterprise_id=ra.enterprise_id\n" +
-            "WHERE state=0")
+    @Select("SELECT *,DATEDIFF(ra.end_time,NOW()) AS dd \n" +
+            "FROM res_app_t ra \n" +
+            "LEFT JOIN resource_t r ON ra.resource_id=r.resource_id\n" +
+            "LEFT JOIN enterprise_t e ON e.enterprise_id=ra.enterprise_id")
     @ResultType(Resource.class)
-    List<Resource> getAllUsed();
+    List<ResourceApplication> getAllUsed();
 
     @Select("SELECT *\n" +
             "FROM resource_t \n" +

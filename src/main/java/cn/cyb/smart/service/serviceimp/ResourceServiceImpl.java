@@ -13,7 +13,7 @@ public class ResourceServiceImpl implements ResourceService {
     @Autowired
     ResourceMapper resourceMapper;
     @Override
-    public List<Resource> getAllUsed() {
+    public List<ResourceApplication> getAllUsed() {
         return resourceMapper.getAllUsed();
     }
 

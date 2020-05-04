@@ -18,7 +18,7 @@ public class ResourceController {
     @Autowired
     ResourceService resourceService;
     @GetMapping("r_used")
-    public List<Resource> getAllUsed() {
+    public List<ResourceApplication> getAllUsed() {
         return resourceService.getAllUsed();
     }
     @GetMapping("r_free")

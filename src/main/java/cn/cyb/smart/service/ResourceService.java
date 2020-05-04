@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 public interface ResourceService {
-    List<Resource> getAllUsed();
+    List<ResourceApplication> getAllUsed();
     List<Resource> getAllFree();
     List<Resource> getAllBreak();
     List<ResourceApplication> getAllWillOutTime();
