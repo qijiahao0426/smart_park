@@ -12,4 +12,5 @@ public interface UserMapper {
     @Select("select * from `user_t` where `user_id`= #{userId}")
     @ResultType(User.class)
     User getUser(String userId);
+
 }
