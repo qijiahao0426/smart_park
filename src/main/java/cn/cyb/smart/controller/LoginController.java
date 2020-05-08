@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class LoginController {
     @Autowired
     UserService userService;
+
     @PostMapping
     public int login(@RequestParam String userId,@RequestParam String password){
         User user=userService.getUser(userId);
