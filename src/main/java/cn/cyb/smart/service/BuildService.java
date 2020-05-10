@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface BuildService {
     List<Build> getAllBuild();
+    int activate(Build build);
+    int editBuild(Build build);
 }

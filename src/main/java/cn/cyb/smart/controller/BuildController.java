@@ -21,4 +21,19 @@ public class BuildController {
     List<Build> getAllBuild(){
         return buildService.getAllBuild();
     }
+
+    @GetMapping("activate")
+    @ResponseBody
+    public int activate(Build build){
+        if(buildService.activate(build)>0)
+            return 7;
+        return 0;
+    }
+    @GetMapping("edit_build")
+    @ResponseBody
+    public int editBuild(Build build){
+        if(buildService.activate(build)>0)
+            return 7;
+        return 0;
+    }
 }

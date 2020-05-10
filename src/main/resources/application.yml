@@ -6,7 +6,7 @@ spring:
   datasource: #数据源
     url: jdbc:mysql://localhost:3306/smart_park?useUnicode=true&characterEncoding=utf-8
     username: root #账号
-    password:  #密码
+    password: 123 #密码
     driver-class-name: com.mysql.cj.jdbc.Driver #数据库驱动
 
 mybatis:

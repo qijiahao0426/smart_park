@@ -15,4 +15,14 @@ public class BuildServiceImpl implements BuildService {
     public List<Build> getAllBuild() {
         return buildMapper.getAllBuild();
     }
+
+    @Override
+    public int activate(Build build) {
+        return buildMapper.activate(build);
+    }
+
+    @Override
+    public int editBuild(Build build) {
+        return buildMapper.editBuild(build);
+    }
 }
