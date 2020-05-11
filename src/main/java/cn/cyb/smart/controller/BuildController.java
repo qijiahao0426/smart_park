@@ -32,7 +32,7 @@ public class BuildController {
     @GetMapping("edit_build")
     @ResponseBody
     public int editBuild(Build build){
-        if(buildService.activate(build)>0)
+        if(buildService.editBuild(build)>0)
             return 7;
         return 0;
     }

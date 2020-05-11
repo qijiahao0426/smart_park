@@ -20,4 +20,14 @@ public class RoomServiceImpl implements RoomService {
     public List<Room> getRoomByBuild(int buildId) {
         return roomMapper.getRoomByBuild(buildId);
     }
+
+    @Override
+    public int editRoom(Room room) {
+        return roomMapper.editRoom(room);
+    }
+
+    @Override
+    public int activate_room(Room room) {
+        return roomMapper.activate_room(room);
+    }
 }

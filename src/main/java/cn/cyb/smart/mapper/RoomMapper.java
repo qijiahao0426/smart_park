@@ -1,9 +1,8 @@
 package cn.cyb.smart.mapper;
 
+import cn.cyb.smart.bean.Build;
 import cn.cyb.smart.bean.Room;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.ResultType;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -27,4 +26,15 @@ public interface RoomMapper {
             "WHERE r.build_id=#{buildId}")
     @ResultType(Room.class)
     List<Room> getRoomByBuild(int buildId);
+
+    @Update("update room_t set room_price=#{roomPrice},room_state=#{roomState},rent_type=#{rentType}" +
+            ",enterprise=(select enterprise_id from enterprise_t where enterprise_name=#{enterpriseName})" +
+            " where room_name=#{roomName}")
+    int editRoom(Room room);
+
+    @Insert("insert into room_t(room_high,room_area,rent_type,room_price,room_state,time_to_use,enterprise,build_id,room_name)" +
+            "values(#{roomHigh},#{roomArea},#{rentType},#{roomPrice},#{roomState},#{timeToUse}," +
+            "(select enterprise_id from enterprise_t where enterprise_name=#{enterpriseName})," +
+            "(select build_id from build_t where build_name=#{buildName}),#{roomName})")
+    int activate_room(Room room);
 }

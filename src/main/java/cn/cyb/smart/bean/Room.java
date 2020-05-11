@@ -12,8 +12,7 @@ public class Room {
     private String rentType;
     private double roomPrice;
     private int roomState;
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
-    private Date timeToUse;
+    private String timeToUse;
     private String enterpriseName;
     private String buildName;
     private String parkName;
@@ -110,11 +109,11 @@ public class Room {
                 '}';
     }
 
-    public Date getTimeToUse() {
+    public String getTimeToUse() {
         return timeToUse;
     }
 
-    public void setTimeToUse(Date timeToUse) {
+    public void setTimeToUse(String timeToUse) {
         this.timeToUse = timeToUse;
     }
 

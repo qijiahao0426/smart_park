@@ -20,6 +20,6 @@ public interface BuildMapper {
     int activate(Build build);
 
     @Update("update build_t set build_name=#{buildName},build_number=#{buildNumber},build_floor=#{buildFloor},build_area=#{buildArea},build_type=#{buildType}" +
-            "park_id=(select park_id from park_t where park_name=#{parkName}) where build_name=#{buildName}")
+            ",park_id=(select park_id from park_t where park_name=#{parkName}) where build_name=#{buildName}")
     int editBuild(Build build);
 }
