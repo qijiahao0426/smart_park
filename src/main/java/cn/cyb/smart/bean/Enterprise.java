@@ -7,7 +7,7 @@ import java.util.Date;
 public class Enterprise {
     private int enterpriseId;
     private String enterpriseName;
-    private String enterPriseLe;
+    private String enterpriseLe;
     private String contractNumber;
     private String contact;
     private int personNumber;
@@ -17,23 +17,6 @@ public class Enterprise {
     private String roomName;
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date leaveTime;
-
-    @Override
-    public String toString() {
-        return "Enterprise{" +
-                "enterpriseId=" + enterpriseId +
-                ", enterpriseName='" + enterpriseName + '\'' +
-                ", enterPriseLe='" + enterPriseLe + '\'' +
-                ", contractNumber='" + contractNumber + '\'' +
-                ", contact='" + contact + '\'' +
-                ", personNumber=" + personNumber +
-                ", useState=" + useState +
-                ", leaveReason='" + leaveReason + '\'' +
-                ", contactPhone='" + contactPhone + '\'' +
-                ", roomName='" + roomName + '\'' +
-                ", leaveTime=" + leaveTime +
-                '}';
-    }
 
     public Date getLeaveTime() {
         return leaveTime;
@@ -67,12 +50,29 @@ public class Enterprise {
         this.enterpriseName = enterpriseName;
     }
 
-    public String getEnterPriseLe() {
-        return enterPriseLe;
+    @Override
+    public String toString() {
+        return "Enterprise{" +
+                "enterpriseId=" + enterpriseId +
+                ", enterpriseName='" + enterpriseName + '\'' +
+                ", enterpriseLe='" + enterpriseLe + '\'' +
+                ", contractNumber='" + contractNumber + '\'' +
+                ", contact='" + contact + '\'' +
+                ", personNumber=" + personNumber +
+                ", useState=" + useState +
+                ", leaveReason='" + leaveReason + '\'' +
+                ", contactPhone='" + contactPhone + '\'' +
+                ", roomName='" + roomName + '\'' +
+                ", leaveTime=" + leaveTime +
+                '}';
     }
 
-    public void setEnterPriseLe(String enterPriseLe) {
-        this.enterPriseLe = enterPriseLe;
+    public String getEnterpriseLe() {
+        return enterpriseLe;
+    }
+
+    public void setEnterpriseLe(String enterpriseLe) {
+        this.enterpriseLe = enterpriseLe;
     }
 
     public String getContractNumber() {

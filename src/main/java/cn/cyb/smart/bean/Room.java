@@ -6,7 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 public class Room {
-    private int roomName;
+    private String roomName;
     private int roomHigh;
     private int roomArea;
     private String rentType;
@@ -43,11 +43,11 @@ public class Room {
         this.parkName = parkName;
     }
 
-    public int getRoomName() {
+    public String getRoomName() {
         return roomName;
     }
 
-    public void setRoomName(int roomName) {
+    public void setRoomName(String roomName) {
         this.roomName = roomName;
     }
 

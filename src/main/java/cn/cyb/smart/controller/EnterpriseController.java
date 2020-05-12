@@ -21,4 +21,19 @@ public class EnterpriseController {
     List<Enterprise> getAllEnterprise(){
         return enterpriseService.getAllEnterprise();
     }
+
+    @GetMapping("edit_enterprise")
+    @ResponseBody
+    int editEnterprise(Enterprise enterprise){
+        if(enterpriseService.editEnterprise(enterprise)>0)
+            return 7;
+        return 0;
+    }
+
+    @GetMapping("undo_enterprise")
+    @ResponseBody
+    int undoEnterprise(Enterprise enterprise){
+        if(enterpriseService.undoEnterprise(enterprise)>0)
+            return 7;
+        return 0;    }
 }

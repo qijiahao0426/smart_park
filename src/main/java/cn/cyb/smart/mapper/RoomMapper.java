@@ -1,8 +1,9 @@
 package cn.cyb.smart.mapper;
 
-import cn.cyb.smart.bean.Build;
+import cn.cyb.smart.bean.Enterprise;
 import cn.cyb.smart.bean.Room;
 import org.apache.ibatis.annotations.*;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -37,4 +38,8 @@ public interface RoomMapper {
             "(select enterprise_id from enterprise_t where enterprise_name=#{enterpriseName})," +
             "(select build_id from build_t where build_name=#{buildName}),#{roomName})")
     int activate_room(Room room);
+
+    @Update("update room_t set enterprise=null" +
+            " where room_name=#{roomName}")
+    void undoEnterprise(String roomName);
 }

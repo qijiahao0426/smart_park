@@ -6,4 +6,7 @@ import java.util.List;
 
 public interface EnterpriseService {
     List<Enterprise> getAllEnterprise();
+    int editEnterprise(Enterprise enterprise);
+    int undoEnterprise(Enterprise enterprise);
+
 }
