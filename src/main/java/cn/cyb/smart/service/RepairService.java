@@ -6,4 +6,7 @@ import java.util.List;
 
 public interface RepairService {
     List<Repair> getAllRepair();
+    int receiveRepair(int repairId);
+    int rejectRepair(int repairId);
+
 }

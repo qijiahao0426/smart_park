@@ -15,4 +15,14 @@ public class RepairServiceImpl implements RepairService {
     public List<Repair> getAllRepair() {
         return repairMapper.getAllRepair();
     }
+
+    @Override
+    public int receiveRepair(int repairId) {
+        return repairMapper.receiveRepair(repairId);
+    }
+
+    @Override
+    public int rejectRepair(int repairId) {
+        return repairMapper.rejectRepair(repairId);
+    }
 }
