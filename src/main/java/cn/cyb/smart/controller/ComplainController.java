@@ -18,8 +18,23 @@ public class ComplainController {
     List<Complain> getAllComplain(){
         return complainService.getAllComplain();
     }
+
+    @GetMapping("response")
+    int response(int complainId,String response){
+        if(complainService.response(complainId,response)>0)
+            return 7;
+        return 0;
+    }
+
     @GetMapping("suggest")
     List<Complain> getAllSuggest(){
         return complainService.getAllSuggest();
+    }
+
+    @GetMapping("responseS")
+    int responseS(int complainId,String response){
+        if(complainService.response(complainId,response)>0)
+            return 7;
+        return 0;
     }
 }

@@ -20,4 +20,9 @@ public class ComplainServiceImpl implements ComplainService {
     public List<Complain> getAllSuggest() {
         return complainMapper.getAllSuggest();
     }
+
+    @Override
+    public int response(int complainId, String response) {
+        return complainMapper.response(complainId,response);
+    }
 }

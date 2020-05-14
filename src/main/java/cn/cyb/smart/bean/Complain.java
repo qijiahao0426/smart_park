@@ -12,6 +12,7 @@ public class Complain {
     private String offender;
     private String content;
     private int type;
+    private String response;
 
     @Override
     public String toString() {
@@ -23,8 +24,17 @@ public class Complain {
                 ", offender='" + offender + '\'' +
                 ", content='" + content + '\'' +
                 ", type=" + type +
+                ", response='" + response + '\'' +
                 ", showTime=" + showTime +
                 '}';
+    }
+
+    public String getResponse() {
+        return response;
+    }
+
+    public void setResponse(String response) {
+        this.response = response;
     }
 
     public Date getShowTime() {

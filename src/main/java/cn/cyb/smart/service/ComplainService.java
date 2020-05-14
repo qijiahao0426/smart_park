@@ -7,5 +7,6 @@ import java.util.List;
 public interface ComplainService {
     List<Complain> getAllComplain();
     List<Complain> getAllSuggest();
+    int response(int complainId,String response);
 
 }

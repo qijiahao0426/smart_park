@@ -4,6 +4,7 @@ import cn.cyb.smart.bean.Complain;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -23,4 +24,7 @@ public interface ComplainMapper {
             "WHERE c.type=0")
     @ResultType(Complain.class)
     List<Complain> getAllSuggest();
+
+    @Update("update complain_t set response=#{response} where complain_id=#{complainId}")
+    int response(int complainId,String response);
 }
