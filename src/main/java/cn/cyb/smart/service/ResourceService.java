@@ -12,4 +12,10 @@ public interface ResourceService {
     List<Resource> getAllFree();
     List<Resource> getAllBreak();
     List<ResourceApplication> getAllWillOutTime();
+    int create(Resource resource);
+    int agree(ResourceApplication resourceApplication);
+    int _break(Resource resource);
+    int back(ResourceApplication resourceApplication);
+    int start(ResourceApplication resourceApplication);
+
 }

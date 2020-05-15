@@ -1,5 +1,6 @@
 package cn.cyb.smart.controller;
 
+import cn.cyb.smart.bean.Build;
 import cn.cyb.smart.bean.Resource;
 import cn.cyb.smart.bean.ResourceApplication;
 import cn.cyb.smart.service.ResourceService;
@@ -34,5 +35,43 @@ public class ResourceController {
         return resourceService.getAllWillOutTime();
     }
 
+    @GetMapping("create")
+    @ResponseBody
+    public int create(Resource resource){
+        if(resourceService.create(resource)>0)
+            return 7;
+        return 0;
+    }
 
+    @GetMapping("break")
+    @ResponseBody
+    public int _break(Resource resource){
+        if(resourceService._break(resource)>0)
+            return 7;
+        return 0;
+    }
+
+    @GetMapping("agree")
+    @ResponseBody
+    public int agree(ResourceApplication resource){
+        if(resourceService.agree(resource)>0)
+            return 7;
+        return 0;
+    }
+
+    @GetMapping("back")
+    @ResponseBody
+    public int back(ResourceApplication resourceApplication){
+        if(resourceService.back(resourceApplication)>0)
+            return 7;
+        return 0;
+    }
+
+    @GetMapping("start")
+    @ResponseBody
+    public int start(ResourceApplication resourceApplication){
+        if(resourceService.start(resourceApplication)>0)
+            return 7;
+        return 0;
+    }
 }

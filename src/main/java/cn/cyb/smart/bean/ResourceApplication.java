@@ -9,6 +9,27 @@ public class ResourceApplication extends Resource{
     private Date beginTime;
     @JsonFormat(pattern="yyyy-MM-dd HH:mm",timezone = "GMT+8")
     private Date endTime;
+    private int enterpriseId;
+
+    @Override
+    public String toString() {
+        return "ResourceApplication{" +
+                "beginTime=" + beginTime +
+                ", endTime=" + endTime +
+                ", enterpriseId=" + enterpriseId +
+                ", enterpriseName='" + enterpriseName + '\'' +
+                ", dd=" + dd +
+                '}';
+    }
+
+    public int getEnterpriseId() {
+        return enterpriseId;
+    }
+
+    public void setEnterpriseId(int enterpriseId) {
+        this.enterpriseId = enterpriseId;
+    }
+
     private String enterpriseName;
     private int dd;
 

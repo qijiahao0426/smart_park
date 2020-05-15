@@ -32,4 +32,34 @@ public class ResourceServiceImpl implements ResourceService {
         return resourceMapper.getAllWillOutTime();
     }
 
+    @Override
+    public int create(Resource resource) {
+        return resourceMapper.create(resource);
+    }
+
+    @Override
+    public int agree(ResourceApplication resourceApplication) {
+        if(resourceMapper.createApp(resourceApplication)>0)
+        return resourceMapper.agree(resourceApplication);
+        return 0;
+    }
+
+    @Override
+    public int _break(Resource resource) {
+        return resourceMapper._break(resource);
+    }
+
+    @Override
+    public int back(ResourceApplication resourceApplication) {
+        if(resourceMapper.deleteApp(resourceApplication)>0){
+            return resourceMapper.back(resourceApplication);
+        }
+        return 0;
+    }
+
+    @Override
+    public int start(ResourceApplication resourceApplication) {
+        return resourceMapper.start(resourceApplication);
+    }
+
 }
